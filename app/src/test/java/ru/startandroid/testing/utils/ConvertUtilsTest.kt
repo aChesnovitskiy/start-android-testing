@@ -1,7 +1,7 @@
 package ru.startandroid.testing.utils
 
+import org.hamcrest.CoreMatchers.equalTo
 import org.junit.Test
-
 import org.junit.Assert.*
 
 class ConvertUtilsTest {
@@ -11,5 +11,6 @@ class ConvertUtilsTest {
         assertEquals(-2, ConvertUtils.stringToInteger("-2"))
         assertEquals(0, ConvertUtils.stringToInteger(""))
         assertEquals(0, ConvertUtils.stringToInteger("a"))
+        assertThat(ConvertUtils.stringToInteger("2"), equalTo(2))
     }
 }
