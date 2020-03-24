@@ -9,6 +9,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.rule.ActivityTestRule
 import org.junit.Rule
 import org.junit.Test
+import ru.startandroid.testing.ui.MainActivity
 
 class MainActivityTest {
     @Rule @JvmField

@@ -1,8 +1,9 @@
-package ru.startandroid.testing
+package ru.startandroid.testing.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import ru.startandroid.testing.R
 
 class MainActivity : AppCompatActivity() {
 
