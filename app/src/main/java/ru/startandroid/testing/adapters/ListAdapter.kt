@@ -13,23 +13,21 @@ import ru.startandroid.testing.data.list.ListItem
 class ListAdapter(
     private val context: Context,
     private val resLayout: Int,
-    private val list: List<ListItem>
+    private val list: List<ListItem>,
+    private val listener: (String) -> Unit
 ) : BaseAdapter() {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view = convertView ?: LayoutInflater.from(context).inflate(resLayout, null)
 
         val item = getItem(position)
 
-        view.findViewById<TextView>(R.id.textViewName).apply {
-            text = item.name
-            setOnClickListener{
-                (parent as ListView).performItemClick(it, position, 0)
-            }
-        }
+        view.findViewById<TextView>(R.id.textViewName).text = item.name
+
         view.findViewById<TextView>(R.id.textViewTen).apply {
-            text = item.ten.toString()
-            setOnClickListener{
-                (parent as ListView).performItemClick(it, position, 0)
+            val ten = item.ten.toString()
+            text = ten
+            setOnClickListener {
+                listener.invoke(ten)
             }
         }
 

@@ -19,7 +19,12 @@ class ListActivity : AppCompatActivity() {
             data.add(ListItem(i, "Item $i", i / 10))
         }
 
-        val adapter = ListAdapter(this, R.layout.list_item, data)
+        val adapter = ListAdapter(this, R.layout.list_item, data) {
+            textView.text = it
+        }
         listView.adapter = adapter
+        listView.setOnItemClickListener { _, _, position, _ ->
+            textView.text = data[position].name
+        }
     }
 }
