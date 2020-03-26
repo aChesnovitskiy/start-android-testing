@@ -1,11 +1,10 @@
-package ru.startandroid.testing.adapters
+package ru.startandroid.testing.ui.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ListView
 import android.widget.TextView
 import ru.startandroid.testing.R
 import ru.startandroid.testing.data.list.ListItem

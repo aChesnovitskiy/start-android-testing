@@ -1,6 +1,7 @@
 package ru.startandroid.testing.list
 
 import android.view.View
+import android.widget.Adapter
 import android.widget.AdapterView
 import androidx.test.espresso.Espresso.onData
 import androidx.test.espresso.Espresso.onView
@@ -49,11 +50,13 @@ class ListActivityTest {
             .perform(click())
         onView(withId(R.id.textView)).check(matches(withText("5")))
 
-        onData(withItemId(100)).check(matches(isDisplayed()))
+        onData(withItemId(52)).check(matches(isDisplayed()))
+
+        onView(withId(R.id.listView)).check(matches(withAdaptedData(withItemId(50))))
     }
 
     /* Matchers */
-    private fun withItemId(id: Int): Matcher<Any?>? {
+    private fun withItemId(id: Int): Matcher<Any?> {
         return object : BoundedMatcher<Any?, ListItem>(ListItem::class.java) {
             override fun describeTo(description: Description) {
                 description.appendText("with item id: $id")
@@ -89,12 +92,15 @@ class ListActivityTest {
                 if (view !is AdapterView<*>) {
                     return false
                 }
+
                 val adapter: Adapter = view.adapter
-                for (i in 0 until adapter.getCount()) {
+
+                for (i in 0 until adapter.count) {
                     if (dataMatcher.matches(adapter.getItem(i))) {
                         return true
                     }
                 }
+
                 return false
             }
         }

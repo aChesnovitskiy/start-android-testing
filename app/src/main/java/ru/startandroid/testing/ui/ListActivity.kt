@@ -2,10 +2,9 @@ package ru.startandroid.testing.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.AdapterView
 import kotlinx.android.synthetic.main.activity_list.*
 import ru.startandroid.testing.R
-import ru.startandroid.testing.adapters.ListAdapter
+import ru.startandroid.testing.ui.adapters.ListAdapter
 import ru.startandroid.testing.data.list.ListItem
 
 class ListActivity : AppCompatActivity() {
@@ -19,7 +18,11 @@ class ListActivity : AppCompatActivity() {
             data.add(ListItem(i, "Item $i", i / 10))
         }
 
-        val adapter = ListAdapter(this, R.layout.list_item, data) {
+        val adapter = ListAdapter(
+            this,
+            R.layout.list_item,
+            data
+        ) {
             textView.text = it
         }
         listView.adapter = adapter
