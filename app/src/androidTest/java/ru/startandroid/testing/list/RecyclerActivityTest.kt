@@ -39,9 +39,17 @@ class RecyclerActivityTest {
     }
 
     // Get view by holder (via actionOnItemAtPosition)
-//    @Test TODO: don't work
+//    @Test TODO: doesn't work
 //    fun recyclerItemClick2() {
 //        onView(withId(R.id.recyclerView)).perform(actionOnHolderItem(withHolderItemId(20), click()))
 //        onView(withId(R.id.textView)).check(matches(withText("Item 20")))
 //    }
+
+    // Get view by view (via actionOnItem)
+    @Test
+    fun recyclerItemClick3() {
+        onView(withId(R.id.recyclerView)).perform(actionOnItem<RecyclerAdapter.ViewHolder>(
+            hasDescendant(withText("Item 52")), click()))
+        onView(withId(R.id.textView)).check(matches(withText("Item 52")))
+    }
 }
