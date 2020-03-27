@@ -11,24 +11,35 @@ import ru.startandroid.testing.R
 import java.util.concurrent.TimeUnit
 
 class LessonNineActivity : AppCompatActivity() {
-    val countingIdlingResource = CountingIdlingResource("Data loading")
+    val simpleIdlingResource = SimpleIdlingResource()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lesson_nine)
 
         button.setOnClickListener {
-            countingIdlingResource.increment()
+            simpleIdlingResource.setIdleState(false)
             Single.just(getString(R.string.data_string))
                 .subscribeOn(Schedulers.io())
                 .delay(1, TimeUnit.SECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe { text ->
                     setText(text)
-                    countingIdlingResource.decrement()
+                    simpleIdlingResource.setIdleState(true)
                 }
-
         }
+
+//        button.setOnClickListener {
+//            countingIdlingResource.increment()
+//            Single.just(getString(R.string.data_string))
+//                .subscribeOn(Schedulers.io())
+//                .delay(1, TimeUnit.SECONDS)
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe { text ->
+//                    setText(text)
+//                    countingIdlingResource.decrement()
+//                }
+//        }
     }
 
     private fun setText(text: String) {

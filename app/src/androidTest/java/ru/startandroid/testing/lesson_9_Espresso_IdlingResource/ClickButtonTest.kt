@@ -17,7 +17,7 @@ class ClickButtonTest {
 
     @Test
     fun whenClickButton() {
-        val idlingResource = activityRule.activity.countingIdlingResource
+        val idlingResource = activityRule.activity.simpleIdlingResource
         val text = "Data string"
 
         IdlingRegistry.getInstance().register(idlingResource)
