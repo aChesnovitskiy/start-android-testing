@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_list.textView
 import kotlinx.android.synthetic.main.activity_recycler.*
 import ru.startandroid.testing.R
-import ru.startandroid.testing.data.list.ListItem
 import ru.startandroid.testing.lesson_8_Espresso_AdapterView_и_RecyclerView.adapters.RecyclerAdapter
 
 class RecyclerActivity : AppCompatActivity() {

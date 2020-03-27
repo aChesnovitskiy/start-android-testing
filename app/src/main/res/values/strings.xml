@@ -4,4 +4,5 @@
     <string name="url">Url</string>
     <string name="file">File</string>
     <string name="empty_text">Text is empty</string>
+    <string name="data_string">Data string</string>
 </resources>

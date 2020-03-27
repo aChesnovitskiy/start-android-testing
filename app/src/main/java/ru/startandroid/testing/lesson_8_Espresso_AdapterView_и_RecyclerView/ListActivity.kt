@@ -5,7 +5,6 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_list.*
 import ru.startandroid.testing.R
 import ru.startandroid.testing.lesson_8_Espresso_AdapterView_и_RecyclerView.adapters.ListAdapter
-import ru.startandroid.testing.data.list.ListItem
 
 class ListActivity : AppCompatActivity() {
 

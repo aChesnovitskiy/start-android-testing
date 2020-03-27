@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import ru.startandroid.testing.R
-import ru.startandroid.testing.data.list.ListItem
+import ru.startandroid.testing.lesson_8_Espresso_AdapterView_и_RecyclerView.ListItem
 
 class ListAdapter(
     private val context: Context,

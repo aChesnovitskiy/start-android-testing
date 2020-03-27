@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".lesson_8_Espresso_AdapterView_и_RecyclerView.RecyclerActivity">
+        <activity android:name=".lesson_9_Espresso_IdlingResource.LessonNineActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".lesson_8_Espresso_AdapterView_и_RecyclerView.ListActivity">
+        <activity android:name=".lesson_8_Espresso_AdapterView_и_RecyclerView.RecyclerActivity">
         </activity>
-        <activity android:name=".lesson_6_Espresso.MainActivity">
-        </activity>
+        <activity android:name=".lesson_8_Espresso_AdapterView_и_RecyclerView.ListActivity"></activity>
+        <activity android:name=".lesson_6_Espresso.MainActivity"></activity>
     </application>
 
 </manifest>

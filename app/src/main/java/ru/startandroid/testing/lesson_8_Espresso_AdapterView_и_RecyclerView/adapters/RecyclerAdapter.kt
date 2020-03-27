@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.list_item.*
 import ru.startandroid.testing.R
-import ru.startandroid.testing.data.list.ListItem
+import ru.startandroid.testing.lesson_8_Espresso_AdapterView_и_RecyclerView.ListItem
 
 class RecyclerAdapter(
     private val list: List<ListItem>,
