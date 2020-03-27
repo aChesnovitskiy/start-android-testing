@@ -7,7 +7,7 @@ import androidx.test.espresso.matcher.BoundedMatcher
 import org.hamcrest.Description
 import org.hamcrest.Matcher
 import org.hamcrest.TypeSafeMatcher
-import ru.startandroid.testing.data.list.ListItem
+import ru.startandroid.testing.lesson_8_Espresso_AdapterView_и_RecyclerView.ListItem
 import ru.startandroid.testing.lesson_8_Espresso_AdapterView_и_RecyclerView.adapters.RecyclerAdapter
 
 object ListMatcher {

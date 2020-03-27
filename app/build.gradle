@@ -41,8 +41,11 @@ dependencies {
     androidTestImplementation 'androidx.test:rules:1.2.0'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.2.0'
     testImplementation 'org.hamcrest:hamcrest:2.2'
     implementation 'org.mockito:mockito-core:2.19.0'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 }
